@@ -1,14 +1,14 @@
-let name = "Tommi";
+let myName = "Tommi";
 let age = 39;
 let favProgrammingLanguage = "javascript";
 
-console.log(name);
+console.log(myName);
 console.log(age);
 console.log(favProgrammingLanguage);
 
-name = "Puupertti Ruma";
+myName = "Puupertti Ruma";
 age = "Old as Time itself";
 favProgrammingLanguage = "Python"
-console.log(name);
+console.log(myName);
 console.log(age);
 console.log(favProgrammingLanguage);
