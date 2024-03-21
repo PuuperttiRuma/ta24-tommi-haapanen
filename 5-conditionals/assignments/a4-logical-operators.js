@@ -43,13 +43,23 @@ const games = [
 // its score is 5 and its ratio of hours played to price is at least 2
 
 const wasWorthIt = (game) => {
-    if (game.score >= 4 && game.price === 0){
+    const score = game.score;
+    const price = game.price;
+    const ratio = game.hoursPlayed / price;
+    console.log(ratio);
+    
+    if (score >= 4 && ratio >= 4 || score === 5 && ratio >= 2){
         return true
+    } else {
+        false;
     }
 }
 
 games.forEach(game => {
-    const verdict = true;
-    console.log(`Game "${game.title} was ${verdict} it.`);
+    if (wasWorthIt(game)){
+        console.log(`Game "${game.title} was worth it.`);
+    } else { 
+        console.log(`Game "${game.title}" was not worth it.`);
+    };
     
 });
