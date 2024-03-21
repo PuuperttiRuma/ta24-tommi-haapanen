@@ -36,3 +36,20 @@ const games = [
         price: 0,
     },
 ];
+
+// Game is worth it if:
+// its score is at least 4 and it is free
+// its score is 4 and its ratio of hours played to price is at least 4
+// its score is 5 and its ratio of hours played to price is at least 2
+
+const wasWorthIt = (game) => {
+    if (game.score >= 4 && game.price === 0){
+        return true
+    }
+}
+
+games.forEach(game => {
+    const verdict = true;
+    console.log(`Game "${game.title} was ${verdict} it.`);
+    
+});
