@@ -1,7 +1,7 @@
 {
     const reverseWords = (sentence: string) => {
         let words = sentence.split(" ");
-        console.log(words);
+        console.log(words);        
         
     }
     const sentence = "this is a short sentence";
