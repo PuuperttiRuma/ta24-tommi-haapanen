@@ -1,7 +1,8 @@
 {
   "devDependencies": {
     "@types/node": "^20.11.30",
-    "@types/readline-sync": "^1.4.8"
+    "@types/readline-sync": "^1.4.8",
+    "eslint": "^8.57.0"
   },
   "dependencies": {
     "readline-sync": "^1.4.10"
