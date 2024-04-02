@@ -38,7 +38,7 @@
     charArray.forEach((char: string) => {
       indexStringArray.push(charIndex[char].toString());      
     });
-    return indexStringArray.join('');
+    return indexStringArray.join("");
   };
 
   console.log(charIndexString("bead")); // prints "2514"

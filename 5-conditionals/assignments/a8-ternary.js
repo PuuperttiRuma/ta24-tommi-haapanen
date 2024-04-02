@@ -1,4 +1,4 @@
 const userName = "Tommi";
 
 console.log(
- userName ? `Hello ${userName}!` : `Please give your name.`);
+  userName ? `Hello ${userName}!` : "Please give your name.");

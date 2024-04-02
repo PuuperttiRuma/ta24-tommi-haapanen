@@ -1,17 +1,17 @@
 //const language: String = 'es';
 
 //const hello = () => {
-const hello = (lang:string) => {
+const hello = (lang: string) => {
   switch (lang) {
-    case 'fi':      
+    case "fi":
       console.log("Hei maailma!");
       break;
-    case 'en':      
+    case "en":
       console.log("Hello world!");
       break;
-    case 'es':      
+    case "es":
       console.log("Hola mundo!");
-      break;  
+      break;
     default:
       break;
   }

@@ -1,5 +1,5 @@
 const commandList = "NNEESSWWCNNEEENNNCEESSSWNNNECEESWWNNNEEEBENNNEEE";
-const coordinates = {x: 0, y: 0};
+const coordinates = { x: 0, y: 0 };
 
 const runCommandList = (commandList: string) => {
   for (let i: number = 0; i < commandList.length; i++) {
@@ -26,30 +26,30 @@ const runCommandList = (commandList: string) => {
         break;
     }
   }
-}
+};
 
 // Some test cases of functionality not of breakability
-runCommandList("NNN")
+runCommandList("NNN");
 console.log(coordinates);
 coordinates.x = 0;
 coordinates.y = 0;
 
-runCommandList("NEW")
+runCommandList("NEW");
 console.log(coordinates);
 coordinates.x = 0;
 coordinates.y = 0;
 
-runCommandList("WWWNNN")
+runCommandList("WWWNNN");
 console.log(coordinates);
 coordinates.x = 0;
 coordinates.y = 0;
 
-runCommandList("WWWCCNNN")
+runCommandList("WWWCCNNN");
 console.log(coordinates);
 coordinates.x = 0;
 coordinates.y = 0;
 
-runCommandList("WWWBNNN")
+runCommandList("WWWBNNN");
 console.log(coordinates);
 coordinates.x = 0;
 coordinates.y = 0;

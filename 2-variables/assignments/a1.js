@@ -8,7 +8,7 @@ console.log(favProgrammingLanguage);
 
 myName = "Puupertti Ruma";
 age = "Old as Time itself";
-favProgrammingLanguage = "Python"
+favProgrammingLanguage = "Python";
 console.log(myName);
 console.log(age);
 console.log(favProgrammingLanguage);

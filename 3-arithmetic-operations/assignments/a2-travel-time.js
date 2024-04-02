@@ -1,4 +1,8 @@
+let distanceKm = 0;
+let speedKmph = 0;
+
 const travelTime = (distanceKm, speedKmph) => distanceKm / speedKmph;
+
 const travelTimeInHoursandMinutes = (distanceKm, speedKmph) => {
   const totalTimeInMinutes = travelTime(distanceKm, speedKmph)*60;
   const inHours = Math.floor(totalTimeInMinutes / 60);

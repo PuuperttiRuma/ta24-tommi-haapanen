@@ -2,9 +2,29 @@
   "devDependencies": {
     "@types/node": "^20.11.30",
     "@types/readline-sync": "^1.4.8",
-    "eslint": "^8.57.0"
+    "@typescript-eslint/eslint-plugin": "^7.4.0",
+    "@typescript-eslint/parser": "^7.4.0",
+    "eslint": "^8.57.0",
+    "eslint-plugin-react": "^7.34.1"
   },
   "dependencies": {
     "readline-sync": "^1.4.10"
-  }
+  },
+  "name": "ta24-tommi-haapanen",
+  "version": "1.0.0",
+  "description": "Buutti Trainee Academy Coding Bootcamp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://gitlab.com/PuuperttiRuma/ta24-tommi-haapanen.git"
+  },
+  "author": "Tommi Haapanen",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/PuuperttiRuma/ta24-tommi-haapanen/issues"
+  },
+  "homepage": "https://gitlab.com/PuuperttiRuma/ta24-tommi-haapanen#readme"
 }

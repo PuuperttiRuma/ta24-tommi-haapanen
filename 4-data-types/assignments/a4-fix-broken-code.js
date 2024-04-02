@@ -15,20 +15,20 @@ treeHitpointsLeft = tree.hitpoints - damage;
 console.log("Tree hitpoints left: " + treeHitpointsLeft);
 
 // Original Code
-const hitpoints = tree.hitpoints;
+// const hitpoints = tree.hitpoints;
 
-{
-    let treeHitpointsLeft;
-    let rockHitpointsLeft;
+// {
+//   let treeHitpointsLeft;
+//   let rockHitpointsLeft;
 
-    const hitpoints = rock.hitpoints;
-    rockHitpointsLeft = hitpoints - damage;
+//   const hitpoints = rock.hitpoints;
+//   rockHitpointsLeft = hitpoints - damage;
 
-    console.log("Rock hitpoints left: " + rockHitpointsLeft);
+//   console.log("Rock hitpoints left: " + rockHitpointsLeft);
 
-    {
-        treeHitpointsLeft = hitpoints - damage;
+//   {
+//     treeHitpointsLeft = hitpoints - damage;
 
-        console.log("Tree hitpoints left: " + treeHitpointsLeft);
-    }
-}
+//     console.log("Tree hitpoints left: " + treeHitpointsLeft);
+//   }
+// }

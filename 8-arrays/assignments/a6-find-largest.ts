@@ -6,7 +6,7 @@ const findLargest = (array: number[]) => {
     }
   }
   return largest;
-}
+};
 
 const array = [ 4, 19, 7, 1, 9, 22, 6, 13 ];
 const largest = findLargest(array);

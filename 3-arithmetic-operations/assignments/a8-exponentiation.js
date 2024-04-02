@@ -8,7 +8,7 @@ const player2 = {
 const tax = (player, taxrate) => {
   const newIncome = Math.round(player.income **= taxrate);
   player.income = newIncome;
-}
+};
 
 console.log(`Difference between player incomes: ${Math.abs(player1.income - player2.income)}.`);
 tax(player1, 0.9);

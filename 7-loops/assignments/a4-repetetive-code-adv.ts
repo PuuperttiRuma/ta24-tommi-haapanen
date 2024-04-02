@@ -11,12 +11,12 @@ function checkSentenceVowels(sentence: string) {
     return count;
   };
 
-  let countOfAs = countChars(sentence, 'a');
-  let countOfEs = countChars(sentence, 'e');
-  let countOfIs = countChars(sentence, 'i');
-  let countOfOs = countChars(sentence, 'o');
-  let countOfUs = countChars(sentence, 'u');
-  let countOfYs = countChars(sentence, 'y');
+  const countOfAs = countChars(sentence, "a");
+  const countOfEs = countChars(sentence, "e");
+  const countOfIs = countChars(sentence, "i");
+  const countOfOs = countChars(sentence, "o");
+  const countOfUs = countChars(sentence, "u");
+  const countOfYs = countChars(sentence, "y");
 
   console.log("A letter count: " + countOfAs);
   console.log("E letter count: " + countOfEs);

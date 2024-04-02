@@ -1,6 +1,6 @@
 const exponentValueList = (n: number) => {
   if (n < 1) {
-    console.log(`n needs to be positive`);
+    console.log("n needs to be positive");
     return;
   }
   let x = 1;
@@ -8,7 +8,7 @@ const exponentValueList = (n: number) => {
     x *= 2;
     console.log(x);
   }
-}
+};
 
 exponentValueList(5);
 exponentValueList(2);

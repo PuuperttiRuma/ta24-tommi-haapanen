@@ -6,7 +6,7 @@ const calculatePyramidalNumberToSum = (targetSum: number) => {
     //console.log("After", i, "loop, sum:", sum);
   }
   return i-1;
-}
+};
 
 //Test cases (not exhaustive): 
 let targetSum = 9;

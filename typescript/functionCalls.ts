@@ -1,6 +1,6 @@
 {
   const numbers = [1, 2];
-  const numberAsString = "3";
+  //const numberAsString = "3";
 
   //const multiplyJS = (a, b) => a*b; gives error on (a, b)
   const multiply = (a: number, b: number): number => a * b;

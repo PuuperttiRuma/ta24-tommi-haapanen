@@ -13,7 +13,7 @@ const books = [
 
 console.log(books);
 
-books[0].read = true
-books[1].read = true
+books[0].read = true;
+books[1].read = true;
 
 console.log(books);

@@ -34,6 +34,6 @@ const printLargestAreaOfTriangles = (
   console.log(`Largest area of the triangles is ${largest}`);
 };
 
-printLargestAreaOfTriangles(firstTriangle, secondTriangle, thirdTriangle)
+printLargestAreaOfTriangles(firstTriangle, secondTriangle, thirdTriangle);
 
 // Could be improved by putting everything in Arrays, but I don't know yet how to do the typing in TS.

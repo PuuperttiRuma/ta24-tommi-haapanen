@@ -1,7 +1,7 @@
 {
   const reverseWords = (sentence: string) => {
-    let wordArray = sentence.split(" ");
-    let reversedWordArray: string[] = [];
+    const wordArray = sentence.split(" ");
+    const reversedWordArray: string[] = [];
     wordArray.forEach((word) => {
       reversedWordArray.push(reverseString(word));
     });
@@ -9,11 +9,11 @@
   };
 
   const reverseString = (string: string) => {
-    let charArray = string.split("");
+    const charArray = string.split("");
     const reversedStringArray: string[] = [];
     charArray.forEach(char => {
-        reversedStringArray.unshift(char);
-    })
+      reversedStringArray.unshift(char);
+    });
     return reversedStringArray.join("");
   };
 

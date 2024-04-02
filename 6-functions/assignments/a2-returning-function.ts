@@ -9,14 +9,14 @@
     }
   };
 
-  let numbers = [0, 6, 8]
+  let numbers = [0, 6, 8];
   console.log(`Minimum of ${numbers[0]}, ${numbers[1]} and ${numbers[2]} is ${minimum(numbers[0], numbers[1], numbers[2])}`);
-  numbers = [5, 1, 8]
+  numbers = [5, 1, 8];
   console.log(`Minimum of ${numbers[0]}, ${numbers[1]} and ${numbers[2]} is ${minimum(numbers[0], numbers[1], numbers[2])}`);
-  numbers = [-234, 6, 8]
+  numbers = [-234, 6, 8];
   console.log(`Minimum of ${numbers[0]}, ${numbers[1]} and ${numbers[2]} is ${minimum(numbers[0], numbers[1], numbers[2])}`);
-  numbers = [0, 0, 8]
+  numbers = [0, 0, 8];
   console.log(`Minimum of ${numbers[0]}, ${numbers[1]} and ${numbers[2]} is ${minimum(numbers[0], numbers[1], numbers[2])}`);
-  numbers = [8, 8, 4]
+  numbers = [8, 8, 4];
   console.log(`Minimum of ${numbers[0]}, ${numbers[1]} and ${numbers[2]} is ${minimum(numbers[0], numbers[1], numbers[2])}`);
 }
