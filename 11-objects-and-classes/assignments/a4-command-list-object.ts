@@ -15,8 +15,19 @@
         C: () => null,
       };
     }
-  }
 
+    executeCommandList(commandList: string) {
+      const commandArray = commandList.split("");
+      for (const command of commandArray) {
+        if (command === "B") {
+          return;
+        }
+        this.commandHandlers[command]();
+      }
+    }
+  }
+  const commandList = "NNEESSWWCNNEEENNNCEESSSWNNNECEESWWNNNEEEBENNNEEE";
   const robo = new Robot(0, 0);
+  robo.executeCommandList(commandList);
   console.log(robo);
 }
