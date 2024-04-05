@@ -4,14 +4,14 @@
 // Make sure your Array types are correct.
 
 {
-    const dirtyGrades: Array<number | string> =
+  const dirtyGrades: Array<number | string> =
         [1, 2, 3, 4, 5, "3", "4", "1", 2, "2"];
 
-    // Function that returns an array of all grades strictly larger
-    // than the cutoff value. 
-    const getGrades = (grades: Array<number|string>, cutoff: number) => {
-        return grades.filter(grade => Number(grade) > cutoff)
-    }
+  // Function that returns an array of all grades strictly larger
+  // than the cutoff value. 
+  const getGrades = (grades: Array<number|string>, cutoff: number) => {
+    return grades.filter(grade => Number(grade) > cutoff);
+  };
 
-    console.log(getGrades(dirtyGrades, 3));    
+  console.log(getGrades(dirtyGrades, 3));    
 }

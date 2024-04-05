@@ -4,8 +4,8 @@
 // Eg. { length: 32, words: 4 }. 
 
 const stringProperties = (string: string) => {
-    return {length: string.length, words: string.split(" ").length};
-}
+  return {length: string.length, words: string.split(" ").length};
+};
 
 console.log(stringProperties("Lorem ipsum dolor sit amet, consectetur adipiscing elit"));
 console.log(stringProperties("sed do eiusmod"));
