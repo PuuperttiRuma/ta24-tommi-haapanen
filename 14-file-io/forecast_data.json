@@ -1,0 +1,7 @@
+{
+  "day": "monday",
+  "temperature": 20,
+  "cloudy": true,
+  "sunny": false,
+  "windy": false
+}
