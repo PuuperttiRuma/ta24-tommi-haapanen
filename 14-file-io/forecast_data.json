@@ -1,6 +1,6 @@
 {
   "day": "monday",
-  "temperature": 20,
+  "temperature": 30,
   "cloudy": true,
   "sunny": false,
   "windy": false
