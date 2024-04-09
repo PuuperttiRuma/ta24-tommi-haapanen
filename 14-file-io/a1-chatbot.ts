@@ -43,7 +43,7 @@ import readline from "readline-sync";
     },
     rename: () => {
       const botNameCandidate = readline.question("What should I be called?: ");
-      do {    
+      do {
         answer = readline.question(
           `Are you happy with ${botNameCandidate}? (y/n): `
         );
@@ -54,6 +54,12 @@ import readline from "readline-sync";
       } else if (answer === "n") {
         console.log("Name not changed.");
       }
+    },
+    forecast: () => {
+      const forecast = generateRandomForecast();
+      console.log(`The weather tomorrow will be ${forecast.sunny ? "sunny" : "dark"} with`);
+      console.log(`${forecast.cloudy ? "cloudy skies" : "clear skies"} and ${forecast.windy ? "strong winds" : "calm breeze"}.`);
+      console.log(`Temperature will be ${forecast.temperature.toFixed(0)}°C.`);
     },
     quit: () => null,
   };
@@ -71,6 +77,15 @@ import readline from "readline-sync";
       console.log(`${capitalize(input)}? I can't do that, ${name}.`);
     }
     questionsAsked++;
+  };
+
+  const generateRandomForecast = () => {
+    return {
+      temperature: Math.random() * 50 - 20,
+      cloudy: Math.random() >= 0.5,
+      sunny: Math.random() >= 0.5,
+      windy: Math.random() >= 0.5,
+    };
   };
 
   // The main program
