@@ -22,11 +22,13 @@
         if (command === "B") {
           return;
         }
-        this.commandHandlers[command]();
+        if (command in this.commandHandlers) {
+          this.commandHandlers[command]();
+        }
       }
     }
   }
-  const commandList = "NNEESSWWCNNEEENNNCEESSSWNNNECEESWWNNNEEEBENNNEEE";
+  const commandList = "NNEESSXWWCNNEEENNNCEESSSWNNNECEESWWNNNEEEBENNNEEE";
   const robo = new Robot(0, 0);
   robo.executeCommandList(commandList);
   console.log(robo);
