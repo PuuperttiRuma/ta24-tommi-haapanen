@@ -9,23 +9,35 @@
     "tsx": "^4.7.2"
   },
   "dependencies": {
-    "readline-sync": "^1.4.10"
+    "readline-sync": "^1.4.10",
+    "tslint": "^6.1.3",
+    "typescript": "^5.4.4"
   },
   "name": "ta24-tommi-haapanen",
   "version": "1.0.0",
   "description": "Buutti Trainee Academy Coding Bootcamp",
-  "main": "index.js",
+  "main": "./lib/index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "lint": "tslint -c tslint.json src/**/*.ts",
+    "prepublish": "npm run build"
   },
   "repository": {
     "type": "git",
     "url": "git+https://gitlab.com/PuuperttiRuma/ta24-tommi-haapanen.git"
   },
-  "author": "Tommi Haapanen",
+  "author": {
+    "name": "Tommi Haapanen"
+  },
   "license": "ISC",
   "bugs": {
     "url": "https://gitlab.com/PuuperttiRuma/ta24-tommi-haapanen/issues"
   },
-  "homepage": "https://gitlab.com/PuuperttiRuma/ta24-tommi-haapanen#readme"
+  "homepage": "https://gitlab.com/PuuperttiRuma/ta24-tommi-haapanen#readme",
+  "files": [
+    "./bin/*",
+    "./lib/*"
+  ],
+  "typings": "./lib/index.d.ts"
 }

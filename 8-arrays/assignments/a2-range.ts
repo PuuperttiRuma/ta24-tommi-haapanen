@@ -1,5 +1,5 @@
 const numberRange = (start: number, end: number) => {
-  const result = [];
+  const result: number[] = [];
   if (start < end) {
     for (let i = 0; i <= end-start; i++) {
       result[i] = start + i;
