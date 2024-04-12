@@ -105,9 +105,17 @@ const postAPost = async (post: Post) => {
   try {
     const response = await axios.post(url + "/posts", post);
     console.log(response.data);
-    
   } catch (error) {
-    console.log(error);    
+    console.log(error);
+  }
+};
+
+const updateAPost = async (post: Post) => {
+  try {
+    const response = await axios.put(url + "/posts/" + post.id, post);
+    console.log(response.data);
+  } catch (error) {
+    console.log(error);
   }
 };
 
@@ -120,6 +128,19 @@ const postAPost = async (post: Post) => {
   console.log(`Post #${postnumber} by ${poster.username}: ${post.title}`);
   await printPostComments(comments);
 
-  const newPost: Post = { id: 0, body: "Message body lorem ipsum liirum lopsum", title: "Message Title", userId: 23 };
+  const newPost: Post = {
+    id: 0,
+    body: "Message body lorem ipsum liirum lopsum",
+    title: "Message Title",
+    userId: 23,
+  };
   await postAPost(newPost);
+
+  const updatedPost: Post = {
+    id: post.id,
+    title: "Uusi hieno otsikko WAU!",
+    body: post.body,
+    userId: post.userId,
+  };
+  await updateAPost(updatedPost);
 })();
