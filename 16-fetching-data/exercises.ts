@@ -25,16 +25,24 @@ interface User {
     zipcode: string;
     geo: {
       lat: string;
-      lng: string;     
-    }
+      lng: string;
+    };
     phone: string;
     website: string;
     company: {
       name: string;
       catchPhrase: string;
       bs: string;
-    }
-  }
+    };
+  };
+}
+
+interface Comment {
+  postId: number;
+  id: number;
+  name: string;
+  email: string;
+  body: string;
 }
 
 const getPostById = async (id: number) => {
@@ -42,8 +50,8 @@ const getPostById = async (id: number) => {
     const response = await axios.get(url + "/posts/" + id);
     return response.data;
   } catch (error) {
-    console.log(error);    
-  }  
+    console.log(error);
+  }
 };
 
 const getUserById = async (userId: number) => {
@@ -51,13 +59,51 @@ const getUserById = async (userId: number) => {
     const response = await axios.get(url + "/users/" + userId);
     return response.data;
   } catch (error) {
-    console.log(error);    
-  }  
+    console.log(error);
+  }
+};
+
+/**
+ * Takes in a post and figures how manyest the given post is
+ * of all the posts made by the user who did the given post.
+ * Ex: Poster has posted three posts in total, and the second
+ * of these posts is given as a parameter. Function returns 2.
+ * @param post: Post
+ * @returns postnumber: number
+ */
+const postNumberOfUser = async (post: Post) => {
+  try {
+    const response = await axios.get(url + "/users/" + post.userId + "/posts");
+    const postsByUser: Post[] = response.data;
+    return postsByUser.findIndex((usersPost) => post.id === usersPost.id) + 1;
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+const getPostComments = async (id: number) => {
+  try {
+    const response = await axios.get(url + "/posts/" + id + "/comments");
+    return response.data;
+
+  } catch (error) {
+    console.log(error);
+  }
+};
+
+const printPostComments = async (comments: Comment[]) => {
+  const firstCommentNumber = comments[0].id;
+  comments.forEach((comment) => {
+    console.log(`Comment #${comment.id - (firstCommentNumber -1 )}: ${comment.name}:\n ${comment.body}\n`);
+  });
 };
 
 (async () => {
-  const post: Post = await getPostById(42);  
-  const user: User = await getUserById(post.userId);
-  console.log(`Post #${post.id}: "${post.title}".`);
-  console.log(`User #${user.id}: "${user.name}".`);
+  const post: Post = await getPostById(42);
+  const poster: User = await getUserById(post.userId);
+  const postnumber = await postNumberOfUser(post);
+  const comments: Comment[] = await getPostComments(post.id);
+
+  console.log(`Post #${postnumber} by ${poster.username}: ${post.title}`);
+  await printPostComments(comments);
 })();
