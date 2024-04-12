@@ -13,6 +13,30 @@ interface Post {
   body: string;
 }
 
+interface User {
+  id: number;
+  name: string;
+  username: string;
+  email: string;
+  address: {
+    street: string;
+    suite: string;
+    city: string;
+    zipcode: string;
+    geo: {
+      lat: string;
+      lng: string;     
+    }
+    phone: string;
+    website: string;
+    company: {
+      name: string;
+      catchPhrase: string;
+      bs: string;
+    }
+  }
+}
+
 const getPostById = async (id: number) => {
   try {
     const response = await axios.get(url + "/posts/" + id);
@@ -23,10 +47,17 @@ const getPostById = async (id: number) => {
 };
 
 const getUserById = async (userId: number) => {
-
-}
+  try {
+    const response = await axios.get(url + "/users/" + userId);
+    return response.data;
+  } catch (error) {
+    console.log(error);    
+  }  
+};
 
 (async () => {
-  const post: Post = await getPostById(42);
+  const post: Post = await getPostById(42);  
+  const user: User = await getUserById(post.userId);
   console.log(`Post #${post.id}: "${post.title}".`);
+  console.log(`User #${user.id}: "${user.name}".`);
 })();
