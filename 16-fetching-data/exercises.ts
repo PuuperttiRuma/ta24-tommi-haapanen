@@ -85,7 +85,6 @@ const getPostComments = async (id: number) => {
   try {
     const response = await axios.get(url + "/posts/" + id + "/comments");
     return response.data;
-
   } catch (error) {
     console.log(error);
   }
@@ -94,8 +93,22 @@ const getPostComments = async (id: number) => {
 const printPostComments = async (comments: Comment[]) => {
   const firstCommentNumber = comments[0].id;
   comments.forEach((comment) => {
-    console.log(`Comment #${comment.id - (firstCommentNumber -1 )}: ${comment.name}:\n ${comment.body}\n`);
+    console.log(
+      `Comment #${comment.id - (firstCommentNumber - 1)}: ${comment.name}:\n ${
+        comment.body
+      }\n`
+    );
   });
+};
+
+const postAPost = async (post: Post) => {
+  try {
+    const response = await axios.post(url + "/posts", post);
+    console.log(response.data);
+    
+  } catch (error) {
+    console.log(error);    
+  }
 };
 
 (async () => {
@@ -106,4 +119,7 @@ const printPostComments = async (comments: Comment[]) => {
 
   console.log(`Post #${postnumber} by ${poster.username}: ${post.title}`);
   await printPostComments(comments);
+
+  const newPost: Post = { id: 0, body: "Message body lorem ipsum liirum lopsum", title: "Message Title", userId: 23 };
+  await postAPost(newPost);
 })();
