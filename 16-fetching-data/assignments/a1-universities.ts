@@ -16,8 +16,7 @@ const getUniversities = async () => {
     const response = await axios.get(url);
     return response.data;
   } catch (error) {
-    console.log(error);
-    
+    console.log(error);    
   }
 };
 
