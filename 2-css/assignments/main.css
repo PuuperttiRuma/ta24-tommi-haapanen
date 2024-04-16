@@ -1,13 +1,52 @@
 body {
-  background-color: #f0f0f0;
+  background-color: #f5f5f5;
   line-height: 1.6;
   margin: 40px auto;
   max-width: 650px;
   padding: 0 15px;
 }
 
+.car-description {
+  background-color: antiquewhite;
+  padding: 15px;
+  margin: 15px;
+  border: 5px solid burlywood;
+  border-radius: 1em;
+}
+
+.car-description > p {
+  color: rgb(160, 9, 9);
+  font: caption;
+  font-family: fantasy;  
+}
+
+#middle-car > p {
+  font-size: larger;
+  color: rgb(69, 110, 185);
+}
+
 p {
   font-size: 18px;
   font-family: Arial, Helvetica, sans-serif;
   color: #242424;
+}
+
+#green-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.flex-green {
+  background-color: rgb(193, 241, 122);
+}
+
+#red-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.flex-red {
+  background-color: rgb(243, 121, 121);
 }
