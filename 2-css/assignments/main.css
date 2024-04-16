@@ -18,7 +18,7 @@ body {
 .car-description > p {
   color: rgb(160, 9, 9);
   font: caption;
-  font-family: fantasy;  
+  font-family: fantasy;
 }
 
 #middle-car > p {
@@ -62,4 +62,38 @@ p {
 
 #larger {
   flex-grow: 4;
+}
+
+#red-container {
+  display: grid;
+  grid-template-columns: 33% 34% 33%;
+  grid-template-rows: 5em 5em;
+}
+
+.red-element {
+  background-color: rgb(243, 121, 121);
+  border: 0.1em solid #430000;
+}
+
+#green-container {
+  display: grid;
+  grid-template-columns: 33% 34% 33%;
+  grid-template-rows: 5em 5em 5em 2em;
+  /* grid-template-areas:
+    "header header header"; */
+}
+
+.green-element {
+  background-color: rgb(193, 241, 122);
+  border: 0.1em solid #011e00;
+}
+
+.header {
+  /* grid-area: header; */
+  grid-column-end: span 3;
+}
+
+.sidebar {
+  grid-row-end: span 3;
+  /* grid-area: sidebar; */
 }
