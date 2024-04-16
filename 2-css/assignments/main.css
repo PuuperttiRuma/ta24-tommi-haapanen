@@ -12,6 +12,7 @@ body {
   margin: 15px;
   border: 5px solid burlywood;
   border-radius: 1em;
+  display: flex;
 }
 
 .car-description > p {
@@ -35,18 +36,30 @@ p {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-}
-
-.flex-green {
-  background-color: rgb(193, 241, 122);
+  row-gap: 4em;
 }
 
 #red-row {
   display: flex;
   flex-direction: row;
-  justify-content: space-around;
+}
+
+.flex-green {
+  background-color: rgb(193, 241, 122);
+  border: 0.1em solid #011e00;
+  flex-grow: 1;
+  margin-left: 1em;
+  margin-right: 1em;
+  height: 10em;
 }
 
 .flex-red {
   background-color: rgb(243, 121, 121);
+  border: 0.1em solid #430000;
+  flex-grow: 1;
+  height: 6em;
+}
+
+#larger {
+  flex-grow: 4;
 }
