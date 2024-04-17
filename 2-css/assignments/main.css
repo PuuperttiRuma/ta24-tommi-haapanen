@@ -1,13 +1,99 @@
 body {
-  background-color: #f0f0f0;
+  background-color: #f5f5f5;
   line-height: 1.6;
   margin: 40px auto;
   max-width: 650px;
   padding: 0 15px;
 }
 
+.car-description {
+  background-color: antiquewhite;
+  padding: 15px;
+  margin: 15px;
+  border: 5px solid burlywood;
+  border-radius: 1em;
+  display: flex;
+}
+
+.car-description > p {
+  color: rgb(160, 9, 9);
+  font: caption;
+  font-family: fantasy;
+}
+
+#middle-car > p {
+  font-size: larger;
+  color: rgb(69, 110, 185);
+}
+
 p {
   font-size: 18px;
   font-family: Arial, Helvetica, sans-serif;
   color: #242424;
+}
+
+#green-row {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  row-gap: 4em;
+}
+
+#red-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.flex-green {
+  background-color: rgb(193, 241, 122);
+  border: 0.1em solid #011e00;
+  flex-grow: 1;
+  margin-left: 1em;
+  margin-right: 1em;
+  height: 10em;
+}
+
+.flex-red {
+  background-color: rgb(243, 121, 121);
+  border: 0.1em solid #430000;
+  flex-grow: 1;
+  height: 6em;
+}
+
+#larger {
+  flex-grow: 4;
+}
+
+#red-container {
+  display: grid;
+  grid-template-columns: 33% 34% 33%;
+  grid-template-rows: 5em 5em;
+}
+
+.red-element {
+  background-color: rgb(243, 121, 121);
+  border: 0.1em solid #430000;
+}
+
+#green-container {
+  display: grid;
+  grid-template-columns: 33% 34% 33%;
+  grid-template-rows: 5em 5em 5em 2em;
+  /* grid-template-areas:
+    "header header header"; */
+}
+
+.green-element {
+  background-color: rgb(193, 241, 122);
+  border: 0.1em solid #011e00;
+}
+
+.header {
+  /* grid-area: header; */
+  grid-column-end: span 3;
+}
+
+.sidebar {
+  grid-row-end: span 3;
+  /* grid-area: sidebar; */
 }
