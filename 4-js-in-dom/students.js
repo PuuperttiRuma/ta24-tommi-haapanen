@@ -11,17 +11,34 @@ const students = [
 
 const studentsContainer = document.getElementById("studentsContainer");
 const toggleStudentsButton = document.getElementById("toggleStudentsButton");
+let studentTable = null;
 
-
-
-const handleButtonClick = () => {
-  console.log("Button clicked!");
-  const studentTable = document.createElement("table");
-  const studentTableBody = document.createElement("tbody");
-  studentsContainer.appendChild(studentTable);
-  studentTable.appendChild(studentTableBody);
-  // students.forEach
-  // const newHtmlChild = htmlParent.createElement("li");
+const createStudentTable = (students) => {
+  const table = document.createElement("table");
+  const tableBody = document.createElement("tbody");
+  students.forEach(student => {
+    const row = document.createElement("tr");
+    Object.keys(student).forEach(key => {
+      const cell = document.createElement("td");
+      const text = document.createTextNode(student[key]);   
+      cell.appendChild(text);
+      row.appendChild(cell);
+    });
+    tableBody.appendChild(row);
+  });
+  studentsContainer.appendChild(table);
+  table.appendChild(tableBody);
+  return table;
 };
 
-toggleStudentsButton.addEventListener("click", handleButtonClick());
+const toggleStudentTable = () => {
+  if (!studentTable){  
+    studentTable = createStudentTable(students);
+    studentsContainer.appendChild(studentTable);
+  } else {
+    studentsContainer.removeChild(studentTable);
+    studentTable = null;
+  }
+};
+
+toggleStudentsButton.addEventListener("click", toggleStudentTable);
