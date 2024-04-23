@@ -34,9 +34,7 @@ const createLi = () => {
 
 const createDeleteButton = (parent) => {
   const button = document.createElement("button");
-  button.classList.add("btn");
-  button.classList.add("btn-danger");
-  button.classList.add("btn-sm");
+  button.classList.add("btn" , "btn-danger", "btn-sm");
   button.classList.add("m-1");
   const text = document.createTextNode("X");
   button.appendChild(text);
@@ -64,6 +62,7 @@ const handleDeleteItemClick = async (event) => {
 
 const createProductList = (list, parent) => {
   const liArray = [];
+  // Käytä Mappia
   list.forEach((item) => {
     const li = createLi();
     const titleText = document.createTextNode(item.title);
@@ -71,6 +70,7 @@ const createProductList = (list, parent) => {
 
     li.appendChild(titleText);
     li.appendChild(priceText);
+
     createDeleteButton(li);
     liArray.push(li);
   });
