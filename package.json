@@ -1,6 +1,7 @@
 {
   "devDependencies": {
-    "@types/node": "^20.11.30",
+    "@types/express": "^4.17.21",
+    "@types/node": "^20.12.7",
     "@types/readline-sync": "^1.4.8",
     "@typescript-eslint/eslint-plugin": "^7.4.0",
     "@typescript-eslint/parser": "^7.4.0",
@@ -8,14 +9,14 @@
     "eslint-plugin-react": "^7.34.1",
     "nodemon": "^3.1.0",
     "ts-node": "^10.9.2",
-    "tsx": "^4.7.2"
+    "tsx": "^4.7.2",
+    "typescript": "^5.4.5"
   },
   "dependencies": {
     "axios": "^1.6.8",
     "express": "^4.19.2",
     "readline-sync": "^1.4.10",
-    "tslint": "^6.1.3",
-    "typescript": "^5.4.4"
+    "tslint": "^6.1.3"
   },
   "name": "ta24-tommi-haapanen",
   "version": "1.0.0",
