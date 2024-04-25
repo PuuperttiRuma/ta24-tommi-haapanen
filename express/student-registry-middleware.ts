@@ -3,8 +3,11 @@ import { Request, Response, NextFunction} from "express";
 const logger = (req: Request, _res: Response, next: NextFunction) =>{
   const {method, url, body} = req;
   const time = new Date().toISOString();
-  const bodyLog = body ? `. BODY: ${JSON.stringify(body)}` : "";
-  console.log(`${time}: ${method} request to ${url}${bodyLog}`);
+  let logString = `${time}: ${method} request to ${url}`;
+  if (Object.keys(body).length > 0) {
+    logString += `. BODY: ${JSON.stringify(body)}`;
+  }
+  console.log(logString);
   next();
 };
 
