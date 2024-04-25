@@ -26,6 +26,16 @@ server.get("/students", (_req: Request, res: Response) => {
   res.send(students);
 });
 
+server.get("/student/:id", (req: Request, res: Response) => {
+  const id = parseInt(req.params.id);
+  const studentToSend = students.find(student => student.id === id);
+  if (studentToSend){
+    res.send(studentToSend);
+  } else {
+    res.status(404).send("Invalid ID");
+  }  
+});
+
 server.post("/student", validateStudent, (req: Request, res: Response) => {
   const {name, email} = req.body;
   const studentToAdd: Student = {
