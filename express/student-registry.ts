@@ -17,9 +17,9 @@ const idGenerator = () => currentNewId++;
 const students: Student[] = [];
 
 // Middleware declarations
-server.use(logger);
 server.use(express.json());
 server.use(express.urlencoded({extended: false}));
+server.use(logger);
 
 // End-points
 server.get("/students", (_req: Request, res: Response) => {
