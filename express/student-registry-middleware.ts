@@ -42,7 +42,7 @@ const validateId = (req: Request, res: Response, next: NextFunction) => {
   const student = students.find((student) => student.id === id);
   if (student === undefined) {
     res.status(404).send("No student with that ID found");
-  }
+  } 
   req.student = student;
   next();
 };

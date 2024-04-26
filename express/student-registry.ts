@@ -23,7 +23,7 @@ const server = express();
 const port = 3100;
 server.listen(port, () => console.log("Listening to port", port));
 
-let currentNewId = 1;
+let currentNewId = 4;
 const idGenerator = () => currentNewId++;
 
 const students: Student[] = [
@@ -77,9 +77,16 @@ server.put(
       (oldStudent) => oldStudent.id === newStudent.id
     );
     students.splice(oldStudentIndex, 1, newStudent);
-    res.status(201).send();
+    res.status(204).send();
   }
 );
+
+server.delete("/students/:id", validateId, (req: Request, res: Response) => {
+  const student = req.student as Student;
+  const studentIndex = students.findIndex(elem => elem.id === student.id);
+  students.splice(studentIndex, 1);
+  res.status(204).send();
+});
 
 // 404
 server.use(unknownEndpoint);
