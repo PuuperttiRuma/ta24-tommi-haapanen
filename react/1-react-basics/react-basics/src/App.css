@@ -33,6 +33,17 @@
   }
 }
 
+.r2d2-greeting {
+  background-color: rgb(65, 65, 197);
+  color: whitesmoke;
+  font-family: 'Times New Roman', Times, serif;
+  padding: 2.0em;
+}
+
+.picture {
+  height: 12em;
+}
+
 .card {
   padding: 2em;
 }
