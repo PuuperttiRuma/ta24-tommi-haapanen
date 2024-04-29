@@ -1,4 +1,5 @@
 import { IPlanet } from "../App";
+import Table from "react-bootstrap/Table";
 
 interface IPlanetListProps {
   planetList: IPlanet[];
@@ -9,7 +10,13 @@ const PlanetList = ({ planetList }: IPlanetListProps) => {
     <div>
       <h1>Assignment 3</h1>
       <h2>Planets</h2>
-      <table>
+      <Table bordered>
+        <thead>
+          <tr>
+            <th>Planet</th>
+            <th>Climate</th>
+          </tr>
+        </thead>
         <tbody>
           {planetList.map((planet) => (
             <tr key={planet.name}>
@@ -18,7 +25,7 @@ const PlanetList = ({ planetList }: IPlanetListProps) => {
             </tr>
           ))}
         </tbody>
-      </table>
+      </Table>
     </div>
   );
 };

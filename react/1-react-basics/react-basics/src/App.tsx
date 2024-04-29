@@ -2,6 +2,7 @@ import "./App.css";
 import Greeting from "./components/Greeting";
 import PlanetList from "./components/PlanetList";
 import R2D2Greeting from "./components/R2D2Greeting";
+import "bootstrap/dist/css/bootstrap-grid.min.css";
 
 interface IPlanet {
   name: string,
