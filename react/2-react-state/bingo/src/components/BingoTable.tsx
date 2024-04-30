@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import BingoButton from "./BingoButton";
 
 interface Button {
