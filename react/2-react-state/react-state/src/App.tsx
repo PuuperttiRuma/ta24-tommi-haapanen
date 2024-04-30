@@ -1,6 +1,6 @@
 import './App.css'
-import Buttons from './modules/Buttons'
-import InsightButton from './modules/InsightButton'
+import Buttons from './components/Buttons'
+import InsightButton from './components/InsightButton'
 
 function App() {
   
