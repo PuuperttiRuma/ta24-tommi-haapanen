@@ -1,4 +1,5 @@
 import BingoButton from "./BingoButton";
+import {useState} from "react";
 
 interface Button {
   row: number;
@@ -18,7 +19,7 @@ const populateButtons = (numberOfBingoRows: number) => {
       buttonArray.push({
         row: row,
         col: col,
-        text: `R${row+1}C${col+1}`,
+        text: `R${row + 1}C${col + 1}`,
         isClicked: false,
       });
     }
@@ -40,15 +41,14 @@ const BingoTable = () => {
 
   return (
     <div>
-      {
-        buttons.map(button => <BingoButton
+      {buttons.map((button) => (
+        <BingoButton
           key={button.text}
           buttonText={button.text}
           handleClick={handleClick}
           isButtonClicked={button.isClicked}
-        />)
-        
-      }
+        />
+      ))}
     </div>
   );
 };
